@@ -1,37 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Versión del modelo de POM -->
     <modelVersion>4.0.0</modelVersion>
+
+    <!-- Configuración del proyecto principal (Spring Boot) -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.4.4</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
+
+    <!-- Identificadores del proyecto -->
     <groupId>dam.ad</groupId>
     <artifactId>AD07_TE01_02</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>AD07_TE01_02</name>
     <description>AD07_TE01_02</description>
+
+    <!-- Propiedades generales del proyecto -->
     <properties>
+        <!-- Versión de Java que se utilizará en el proyecto -->
         <java.version>21</java.version>
     </properties>
+
+    <!-- Dependencias necesarias para el proyecto -->
     <dependencies>
+
+        <!-- Dependencia para MongoDB, se usa para la integración con bases de datos MongoDB -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
+
+        <!-- Dependencia para iniciar un servidor web, se usa para aplicaciones REST -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- Dependencia para herramientas de desarrollo (como el reinicio automático de la app durante el desarrollo) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+
+        <!-- Dependencia para pruebas unitarias (usada en el desarrollo y testing) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -39,13 +57,15 @@
         </dependency>
     </dependencies>
 
+    <!-- Configuración de la fase de construcción del proyecto -->
     <build>
         <plugins>
+
+            <!-- Plugin para empaquetar y ejecutar la aplicación Spring Boot -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
-
 </project>

@@ -10,5 +10,6 @@ public interface BombardeoRepository extends MongoRepository<Bombardeo, String> 
     // Búsqueda por localidad
     List<Bombardeo> findByPropertiesLocalidad(String localidad);
     
+    // Búsqueda por bando
     List<Bombardeo> findByPropertiesBando(String bando);
 }
